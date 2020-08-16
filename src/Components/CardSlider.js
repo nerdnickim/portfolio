@@ -36,10 +36,13 @@ const ArrowContain = styled.div`
 	padding: 0 10px;
 `;
 
-const ArrowRight = styled.button``;
+const ArrowRight = styled.button`
+	opacity: ${(props) => (props.state === props?.stateS?.childElementCount - 1 ? 0.3 : 1)};
+`;
 
 const ArrowLeft = styled.button`
 	transform: rotate(180deg);
+	opacity: ${(props) => (props.state === 0 ? 0.3 : 1)};
 `;
 
 const Slide = () => {
@@ -82,10 +85,10 @@ const Slide = () => {
 				</SlidePage>
 			</SlideWrapper>
 			<ArrowContain>
-				<ArrowLeft onClick={leftHandle}>
+				<ArrowLeft state={state} onClick={leftHandle}>
 					<Arrow />
 				</ArrowLeft>
-				<ArrowRight onClick={rightHandle}>
+				<ArrowRight state={state} stateS={ref?.current} onClick={rightHandle}>
 					<Arrow />
 				</ArrowRight>
 			</ArrowContain>
