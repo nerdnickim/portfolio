@@ -9,12 +9,12 @@ const Wrapper = styled.div`
 	box-shadow: grey 0px 0px 20px 11px;
 `;
 
-const Contact = () => {
+const Projects = () => {
 	return (
 		<Wrapper>
-			<span>Contact</span>
+			<span>Projects</span>
 		</Wrapper>
 	);
 };
 
-export default Contact;
+export default Projects;

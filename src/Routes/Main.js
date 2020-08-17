@@ -28,6 +28,7 @@ const FirstLine = styled.div`
 	display: flex;
 	opacity: 0;
 	margin-bottom: 20px;
+	align-items: center;
 	transition: all 1s linear;
 `;
 

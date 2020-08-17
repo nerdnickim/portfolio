@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Main from "../Routes/Main";
 import Profile from "../Routes/Profile";
 import { Arrow } from "./Icons";
-import Contact from "../Routes/Contact";
+import Projects from "../Routes/Projects";
 import { HashRouter as Router } from "react-router-dom";
 
 const SlideContain = styled.div`
@@ -83,7 +83,7 @@ const Slide = () => {
 						<Profile />
 					</SlidePage>
 					<SlidePage>
-						<Contact />
+						<Projects />
 					</SlidePage>
 				</SlideWrapper>
 				<ArrowContain>
