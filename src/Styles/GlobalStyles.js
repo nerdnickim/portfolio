@@ -7,7 +7,11 @@ export default createGlobalStyle`
         box-sizing: border-box;
     }
     body{
-        background-color: #EEE9E9
+        background-color: #EEE9E9;
+    }
+    span{
+        font-size: 24px;
+
     }
     a{
         text-decoration: none;
