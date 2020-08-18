@@ -28,11 +28,16 @@ const Name = styled.div`
 	align-items: center;
 `;
 
+const Span = styled.span``;
+
 const Info = styled.div`
 	width: 300px;
 	height: 0;
 	background-color: blue;
 	transition: height 0.4s;
+	${Span} {
+		display: none;
+	}
 `;
 
 const Header = styled.header`
@@ -63,8 +68,6 @@ const RightColumn = styled.div`
 	}
 `;
 
-const Span = styled.span``;
-
 const ContainHeader = styled.div`
 	display: flex;
 	flex-direction: column;
@@ -75,6 +78,10 @@ const ContainHeader = styled.div`
 		}
 		${Info} {
 			height: 200px;
+		}
+
+		${Span} {
+			display: flex;
 		}
 	}
 `;
@@ -183,7 +190,9 @@ const Profile = () => {
 							<Span>NAME: </Span>
 							<H1>김의교</H1>
 						</Name>
-						<Info>dadfadf</Info>
+						<Info>
+							<Span>dadfadf</Span>
+						</Info>
 					</ContainHeader>
 					<ContainBottom>
 						<IconsContain>
