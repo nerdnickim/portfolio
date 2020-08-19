@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 import ExitComponent from "./ExitComponent";
 import Image from "./Image";
@@ -141,6 +141,7 @@ const Span = styled.span`
 
 const Project = ({ data, explan, textS }) => {
 	const [state, setState] = useState({ uri: "", id: 0 });
+	const listRef = useRef();
 
 	const viewHandle = (e, { id }) => {
 		e.persist();
@@ -150,21 +151,21 @@ const Project = ({ data, explan, textS }) => {
 			return;
 		} else {
 			setState((prev) => ({ ...prev, uri: e.target.src, id }));
-			console.log(e.target.src);
 		}
 	};
 
 	const rightHandle = (e) => {
 		e.persist();
 		e.preventDefault();
-		const liTarget = e?.target?.offsetParent?.childNodes[0];
 
-		if (liTarget.children.length > state.id) {
+		const liTarget = listRef.current.childNodes;
+
+		if (liTarget.length > state.id) {
 			setState((prev) => ({ ...prev, id: state.id + 1 }));
 
-			liTarget.childNodes.forEach((i) =>
+			liTarget.forEach((i) =>
 				i.id === JSON.stringify(state.id + 1)
-					? setState((prev) => ({ ...prev, uri: i.children[0].lastChild.lastChild.src }))
+					? setState((prev) => ({ ...prev, uri: i.firstChild.firstChild.firstChild.src }))
 					: null
 			);
 		}
@@ -174,16 +175,16 @@ const Project = ({ data, explan, textS }) => {
 		e.persist();
 		e.preventDefault();
 
-		const liTarget = e?.target?.offsetParent?.childNodes[0];
+		const liTarget = listRef.current.childNodes;
 
 		if (state.id === 1) {
 			return;
 		} else {
 			setState((prev) => ({ ...prev, id: state.id - 1 }));
 
-			liTarget.childNodes.forEach((i) =>
+			liTarget.forEach((i) =>
 				i.id === JSON.stringify(state.id - 1)
-					? setState((prev) => ({ ...prev, uri: i.children[0].lastChild.lastChild.src }))
+					? setState((prev) => ({ ...prev, uri: i.firstChild.firstChild.firstChild.src }))
 					: null
 			);
 		}
@@ -205,7 +206,7 @@ const Project = ({ data, explan, textS }) => {
 			<Contain>
 				<Header>
 					<ListContain>
-						<Ul>
+						<Ul ref={listRef}>
 							{data.map((u) => (
 								<Li key={u.name} id={u.id} foc={u.id === state.id ? true : false}>
 									<Button onClick={(e) => viewHandle(e, { id: u.id })}>
