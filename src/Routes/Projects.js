@@ -1,9 +1,11 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import { Switch, Route, Link, withRouter } from "react-router-dom";
+import { Switch, Route, withRouter } from "react-router-dom";
 import First from "./Projects/WorkFirst";
 import InstaWebClone from "./Projects/WorkSecond";
 import InstaAppClone from "./Projects/WorkThird";
+import ThumbnNail from "../Components/Thumbnail";
+import { photos } from "../PhotosContain";
 
 const Wrapper = styled.div`
 	width: 90%;
@@ -23,19 +25,6 @@ const Contain = styled.div`
 	padding: 0 30px;
 `;
 
-const Div = styled.div`
-	padding: 10px 10px;
-	border: 1px solid;
-	background-color: blue;
-	height: 100%;
-`;
-
-const Links = styled(Link)`
-	height: 40%;
-`;
-
-const Name = styled.span``;
-
 const Projects = withRouter(({ location }) => {
 	const arrow = document.getElementsByClassName("arrow");
 	useEffect(() => {
@@ -48,17 +37,17 @@ const Projects = withRouter(({ location }) => {
 	return (
 		<Wrapper>
 			<Contain>
-				<Links to="/newWave">
-					<Div>
-						<Name></Name>
-					</Div>
-				</Links>
-				<Links to="/webClone">
-					<Div />
-				</Links>
-				<Links to="/appClone">
-					<Div />
-				</Links>
+				<ThumbnNail url={"/newWave"} name={"new wave"} thumb={photos.newWave[2].src} />
+				<ThumbnNail
+					url={"/webClone"}
+					name={"instaWeb clone"}
+					thumb={photos.instaWeb[4].src}
+				/>
+				<ThumbnNail
+					url={"/appClone"}
+					name={"instaApp clone"}
+					thumb={photos.newWave[2].src}
+				/>
 			</Contain>
 			<Switch>
 				<Route path="/newWave" component={First} />
