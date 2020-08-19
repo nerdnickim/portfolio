@@ -1,5 +1,6 @@
 import React from "react";
 import { ThemeProvider } from "styled-components";
+import { HashRouter as Router } from "react-router-dom";
 import Theme from "../Styles/Theme";
 import GlobalStyles from "../Styles/GlobalStyles";
 import styled from "styled-components";
@@ -13,7 +14,9 @@ function App() {
 		<ThemeProvider theme={Theme}>
 			<GlobalStyles />
 			<Wrapper>
-				<Slide />
+				<Router>
+					<Slide />
+				</Router>
 			</Wrapper>
 		</ThemeProvider>
 	);

@@ -41,10 +41,10 @@ export default ({ refs }) => {
 	return (
 		<>
 			<ArrowLeft state={state} onClick={leftHandle}>
-				<Arrow />
+				<Arrow size={48} />
 			</ArrowLeft>
 			<ArrowRight state={state} stateS={refs?.current} onClick={rightHandle}>
-				<Arrow />
+				<Arrow size={48} />
 			</ArrowRight>
 		</>
 	);

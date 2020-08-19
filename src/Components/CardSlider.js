@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Main from "../Routes/Main";
 import Profile from "../Routes/Profile";
 import Projects from "../Routes/Projects";
-import { HashRouter as Router } from "react-router-dom";
+
 import SlideArrow from "./SlideArrow";
 
 const SlideContain = styled.div`
@@ -42,24 +42,22 @@ const Slide = () => {
 	const ref = useRef(null);
 
 	return (
-		<Router>
-			<SlideContain>
-				<SlideWrapper ref={ref}>
-					<SlidePage>
-						<Main />
-					</SlidePage>
-					<SlidePage>
-						<Profile />
-					</SlidePage>
-					<SlidePage>
-						<Projects />
-					</SlidePage>
-				</SlideWrapper>
-				<ArrowContain className="arrow">
-					<SlideArrow refs={ref} />
-				</ArrowContain>
-			</SlideContain>
-		</Router>
+		<SlideContain>
+			<SlideWrapper ref={ref}>
+				<SlidePage>
+					<Main />
+				</SlidePage>
+				<SlidePage>
+					<Profile />
+				</SlidePage>
+				<SlidePage>
+					<Projects />
+				</SlidePage>
+			</SlideWrapper>
+			<ArrowContain className="arrow">
+				<SlideArrow refs={ref} />
+			</ArrowContain>
+		</SlideContain>
 	);
 };
 

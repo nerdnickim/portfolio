@@ -34,6 +34,8 @@ const Links = styled(Link)`
 	height: 40%;
 `;
 
+const Name = styled.span``;
+
 const Projects = withRouter(({ location }) => {
 	const arrow = document.getElementsByClassName("arrow");
 	useEffect(() => {
@@ -47,7 +49,9 @@ const Projects = withRouter(({ location }) => {
 		<Wrapper>
 			<Contain>
 				<Links to="/newWave">
-					<Div />
+					<Div>
+						<Name></Name>
+					</Div>
 				</Links>
 				<Links to="/webClone">
 					<Div />

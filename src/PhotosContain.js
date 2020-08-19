@@ -6,10 +6,10 @@ import detail from "./photo/newWave/productDetail.png";
 
 export const photos = {
 	newWave: [
-		{ name: "main", src: main, id: "1" },
-		{ name: "menu", src: menu, id: "2" },
-		{ name: "archiveList", src: archiveList, id: "3" },
-		{ name: "productList", src: productList, id: "4" },
-		{ name: "detail", src: detail, id: "5" },
+		{ name: "main", src: main, id: 1 },
+		{ name: "menu", src: menu, id: 2 },
+		{ name: "archiveList", src: archiveList, id: 3 },
+		{ name: "productList", src: productList, id: 4 },
+		{ name: "detail", src: detail, id: 5 },
 	],
 };
