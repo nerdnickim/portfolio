@@ -40,3 +40,24 @@ export const photos = {
 		{ name: "searchPost", src: searchPost, id: 12 },
 	],
 };
+
+export const textS = {
+	newWave: [
+		{ id: 1, text: "Javascript" },
+		{ id: 2, text: "Jquery" },
+	],
+	instaWeb: [
+		{ id: 1, text: "Javascript" },
+		{ id: 2, text: "Jquery" },
+	],
+	instaApp: [
+		{ id: 1, text: "Javascript" },
+		{ id: 2, text: "Jquery" },
+	],
+};
+
+export const explan = {
+	newWave: "",
+	instaWeb: "",
+	instaApp: "",
+};

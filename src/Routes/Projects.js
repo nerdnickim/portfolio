@@ -5,7 +5,7 @@ import First from "./Projects/WorkFirst";
 import InstaWebClone from "./Projects/WorkSecond";
 import InstaAppClone from "./Projects/WorkThird";
 import ThumbnNail from "../Components/Thumbnail";
-import { photos } from "../PhotosContain";
+import { photos } from "../dataContain";
 
 const Wrapper = styled.div`
 	width: 90%;
