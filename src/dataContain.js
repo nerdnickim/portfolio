@@ -111,3 +111,16 @@ export const explan = {
 	instaWeb: "",
 	instaApp: "",
 };
+
+export const address = {
+	newWave: "",
+	instaWeb: "https://github.com/nerdnickim/prismagram-frontend",
+	instaApp: "https://github.com/nerdnickim/prismagram-app",
+	prismaServer: "https://github.com/nerdnickim/prismagram",
+};
+
+export const pageAddress = {
+	newWave: "http://www.newwaveboys.co.kr/index.html",
+	instaWeb: "https://cloninggram.netlify.app/#/",
+	instaApp: "",
+};

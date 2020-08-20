@@ -153,12 +153,18 @@ const Link = styled.a`
 	${Span} {
 		font-size: 1.4rem;
 		color: #4865ee;
+		transition: color 0.3s;
 	}
 	cursor: pointer;
 	margin-top: 20px;
+	&:hover {
+		${Span} {
+			color: white;
+		}
+	}
 `;
 
-const ProjectApp = ({ data, explan, textS, address }) => {
+const ProjectApp = ({ data, explan, textS, address, serverGit }) => {
 	const [state, setState] = useState({ uri: "", id: 0 });
 	const listRef = useRef();
 
@@ -265,9 +271,14 @@ const ProjectApp = ({ data, explan, textS, address }) => {
 								))}
 							</Skills>
 						</SkillInfo>
-						<Link href={address}>
+						<Link href={address} target="_blank">
 							<Span>Go to GitHub</Span>
 						</Link>
+						{serverGit && (
+							<Link href={serverGit} target="_blank">
+								<Span>Go to ServerCode</Span>
+							</Link>
+						)}
 					</Infos>
 				</Body>
 			</Contain>

@@ -36,7 +36,7 @@ const Info = styled.div`
 	background-color: blue;
 	transition: height 0.4s;
 	${Span} {
-		display: none;
+		opacity: 0;
 	}
 `;
 
@@ -81,7 +81,8 @@ const ContainHeader = styled.div`
 		}
 
 		${Span} {
-			display: flex;
+			opacity: 1;
+			transition: opacity 0.3s 0.2s;
 		}
 	}
 `;

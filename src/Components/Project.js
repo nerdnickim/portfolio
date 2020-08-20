@@ -131,8 +131,6 @@ const Skills = styled.div`
 	display: flex;
 `;
 
-//Public
-
 const H1 = styled.h1`
 	color: #4865ee;
 	font-size: 2rem;
@@ -147,16 +145,30 @@ const Span = styled.span`
 	font-size: 18px;
 `;
 
+//Bottom
+
+const Links = styled.div`
+	display: flex;
+	flex-direction: column;
+	align-self: flex-end;
+`;
+
 const Link = styled.a`
 	${Span} {
 		font-size: 1.4rem;
 		color: #4865ee;
+		transition: color 0.3s;
 	}
-	align-self: flex-end;
 	cursor: pointer;
+	margin-bottom: 4px;
+	&:hover {
+		${Span} {
+			color: white;
+		}
+	}
 `;
 
-const Project = ({ data, explan, textS, address }) => {
+const Project = ({ data, explan, textS, address, pageAddress, serverGit }) => {
 	const [state, setState] = useState({ uri: "", id: 0 });
 	const listRef = useRef();
 
@@ -264,9 +276,23 @@ const Project = ({ data, explan, textS, address }) => {
 							))}
 						</Skills>
 					</SkillInfo>
-					<Link href={address}>
-						<Span>Go to GitHub</Span>
-					</Link>
+					<Links>
+						{address && (
+							<Link href={address} target="_blank">
+								<Span>Go to GitHub</Span>
+							</Link>
+						)}
+						{pageAddress && (
+							<Link href={pageAddress} target="_blank">
+								<Span>Go to Page</Span>
+							</Link>
+						)}
+						{serverGit && (
+							<Link href={serverGit} target="_blank">
+								<Span>Go to ServerCode</Span>
+							</Link>
+						)}
+					</Links>
 				</Bottom>
 			</Contain>
 		</Wrapper>
