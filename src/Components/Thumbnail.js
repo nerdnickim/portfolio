@@ -12,15 +12,30 @@ const Name = styled.h1`
 `;
 
 const Links = styled(Link)`
-	height: 40%;
+	&:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: linear-gradient(0deg, #0000001f, transparent);
+		background-size: cover;
+		width: 100%;
+		height: 100%;
+		transition: all 0.8s;
+	}
+
+	position: relative;
+	width: 100%;
+	height: 100%;
 	&:hover {
 		box-shadow: 7px 8px black;
+
 		${Name} {
 			color: #365ce8;
 			transform: scale(1.2);
 		}
 	}
-	transition: box-shadow 0.3s;
+	transition: box-shadow 0.5s;
 `;
 
 const Div = styled.div`

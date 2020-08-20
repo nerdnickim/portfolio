@@ -6,7 +6,7 @@ import profilePhoto from "../photo/profilePhoto.jpg";
 
 const Wrapper = styled.div`
 	width: 90%;
-	height: 80%;
+	height: 86%;
 	display: flex;
 	flex-direction: column;
 	border-radius: 20px;

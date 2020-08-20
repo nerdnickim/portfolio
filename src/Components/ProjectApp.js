@@ -82,7 +82,7 @@ const Ul = styled.ul`
 `;
 
 const Li = styled.li`
-	min-width: 120px;
+	min-width: 72px;
 	margin: 6px 10px;
 	cursor: pointer;
 	opacity: ${(props) => (props.foc === true ? 0.3 : 1)};
@@ -115,7 +115,9 @@ const Right = styled.button`
 `;
 
 // In MainView
-const MainImage = styled.div``;
+const MainImage = styled.div`
+	width: 34%;
+`;
 
 // In SkillView
 
@@ -139,7 +141,7 @@ const Span = styled.span`
 	font-size: 18px;
 `;
 
-const Project = ({ data, explan, textS }) => {
+const ProjectApp = ({ data, explan, textS }) => {
 	const [state, setState] = useState({ uri: "", id: 0 });
 	const listRef = useRef();
 
@@ -251,4 +253,4 @@ const Project = ({ data, explan, textS }) => {
 	);
 };
 
-export default Project;
+export default ProjectApp;
