@@ -45,21 +45,35 @@ const Body = styled.div`
 	margin-bottom: 10px;
 `;
 
-const Info = styled.div`
-	color: white;
-`;
-
 //In Body
 
 const MainView = styled.div`
 	width: 60%;
+	display: flex;
+	justify-content: center;
 `;
 
-const SkillInfo = styled.div`
-	width: 40%;
+const Infos = styled.div`
 	display: flex;
 	flex-direction: column;
+`;
+
+//Infos
+
+const SkillInfo = styled.div`
+	display: flex;
+	flex-direction: column;
+`;
+
+const Skills = styled.div`
+	display: flex;
 	align-items: center;
+`;
+
+const Info = styled.div`
+	max-height: 320px;
+	height: 100%;
+	color: white;
 `;
 
 // In Header
@@ -82,7 +96,7 @@ const Ul = styled.ul`
 `;
 
 const Li = styled.li`
-	min-width: 72px;
+	min-width: 50px;
 	margin: 6px 10px;
 	cursor: pointer;
 	opacity: ${(props) => (props.foc === true ? 0.3 : 1)};
@@ -116,13 +130,7 @@ const Right = styled.button`
 
 // In MainView
 const MainImage = styled.div`
-	width: 34%;
-`;
-
-// In SkillView
-
-const Skills = styled.div`
-	display: flex;
+	width: 40%;
 `;
 
 //Public
@@ -236,18 +244,20 @@ const ProjectApp = ({ data, explan, textS }) => {
 							<Image src={state.uri} />
 						</MainImage>
 					</MainView>
-					<SkillInfo>
-						<H1>Skills</H1>
-						<Skills>
-							{textS.map((t) => (
-								<FatText key={t.id} text={t.text} />
-							))}
-						</Skills>
-					</SkillInfo>
+					<Infos>
+						<Info>
+							<Span>{explan}</Span>
+						</Info>
+						<SkillInfo>
+							<H1>Skills</H1>
+							<Skills>
+								{textS.map((t) => (
+									<FatText key={t.id} text={t.text} />
+								))}
+							</Skills>
+						</SkillInfo>
+					</Infos>
 				</Body>
-				<Info>
-					<Span>{explan}</Span>
-				</Info>
 			</Contain>
 		</Wrapper>
 	);

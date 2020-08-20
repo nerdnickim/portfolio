@@ -90,11 +90,19 @@ export const textS = {
 	],
 	instaWeb: [
 		{ id: 1, text: "Javascript" },
-		{ id: 2, text: "Jquery" },
+		{ id: 2, text: "ReactJs" },
+		{ id: 3, text: "NodeJs" },
+		{ id: 4, text: "Apollo" },
+		{ id: 5, text: "GraphQL" },
+		{ id: 6, text: "Prisma" },
 	],
 	instaApp: [
 		{ id: 1, text: "Javascript" },
-		{ id: 2, text: "Jquery" },
+		{ id: 2, text: "ReactNative" },
+		{ id: 3, text: "NodeJs" },
+		{ id: 4, text: "Apollo" },
+		{ id: 5, text: "GraphQL" },
+		{ id: 6, text: "Prisma" },
 	],
 };
 

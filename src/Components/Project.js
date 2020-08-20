@@ -45,8 +45,10 @@ const Body = styled.div`
 	margin-bottom: 10px;
 `;
 
-const Info = styled.div`
-	color: white;
+const SkillInfo = styled.div`
+	width: 40%;
+	display: flex;
+	flex-direction: column;
 `;
 
 //In Body
@@ -54,12 +56,8 @@ const Info = styled.div`
 const MainView = styled.div`
 	width: 60%;
 `;
-
-const SkillInfo = styled.div`
-	width: 40%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+const Info = styled.div`
+	color: white;
 `;
 
 // In Header
@@ -74,15 +72,18 @@ const ListContain = styled.div`
 
 const Ul = styled.ul`
 	display: flex;
-	overflow: scroll;
+	overflow-x: scroll;
+	overflow-y: hidden;
 	width: 88%;
+	max-height: 90px;
 	border: 1px solid #e4e0e0;
 	padding: 10px 4px;
 	border-radius: 10px;
 `;
 
 const Li = styled.li`
-	min-width: 120px;
+	max-width: 120px;
+	min-width: 112px;
 	margin: 6px 10px;
 	cursor: pointer;
 	opacity: ${(props) => (props.foc === true ? 0.3 : 1)};
@@ -234,18 +235,18 @@ const Project = ({ data, explan, textS }) => {
 							<Image src={state.uri} />
 						</MainImage>
 					</MainView>
-					<SkillInfo>
-						<H1>Skills</H1>
-						<Skills>
-							{textS.map((t) => (
-								<FatText key={t.id} text={t.text} />
-							))}
-						</Skills>
-					</SkillInfo>
+					<Info>
+						<Span>{explan}</Span>
+					</Info>
 				</Body>
-				<Info>
-					<Span>{explan}</Span>
-				</Info>
+				<SkillInfo>
+					<H1>Skills</H1>
+					<Skills>
+						{textS.map((t) => (
+							<FatText key={t.id} text={t.text} />
+						))}
+					</Skills>
+				</SkillInfo>
 			</Contain>
 		</Wrapper>
 	);
