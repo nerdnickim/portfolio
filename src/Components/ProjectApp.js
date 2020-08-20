@@ -149,7 +149,16 @@ const Span = styled.span`
 	font-size: 18px;
 `;
 
-const ProjectApp = ({ data, explan, textS }) => {
+const Link = styled.a`
+	${Span} {
+		font-size: 1.4rem;
+		color: #4865ee;
+	}
+	cursor: pointer;
+	margin-top: 20px;
+`;
+
+const ProjectApp = ({ data, explan, textS, address }) => {
 	const [state, setState] = useState({ uri: "", id: 0 });
 	const listRef = useRef();
 
@@ -256,6 +265,9 @@ const ProjectApp = ({ data, explan, textS }) => {
 								))}
 							</Skills>
 						</SkillInfo>
+						<Link href={address}>
+							<Span>Go to GitHub</Span>
+						</Link>
 					</Infos>
 				</Body>
 			</Contain>

@@ -45,8 +45,15 @@ const Body = styled.div`
 	margin-bottom: 10px;
 `;
 
+const Bottom = styled.div`
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+`;
+
 const SkillInfo = styled.div`
-	width: 40%;
+	width: 60%;
 	display: flex;
 	flex-direction: column;
 `;
@@ -140,7 +147,16 @@ const Span = styled.span`
 	font-size: 18px;
 `;
 
-const Project = ({ data, explan, textS }) => {
+const Link = styled.a`
+	${Span} {
+		font-size: 1.4rem;
+		color: #4865ee;
+	}
+	align-self: flex-end;
+	cursor: pointer;
+`;
+
+const Project = ({ data, explan, textS, address }) => {
 	const [state, setState] = useState({ uri: "", id: 0 });
 	const listRef = useRef();
 
@@ -239,14 +255,19 @@ const Project = ({ data, explan, textS }) => {
 						<Span>{explan}</Span>
 					</Info>
 				</Body>
-				<SkillInfo>
-					<H1>Skills</H1>
-					<Skills>
-						{textS.map((t) => (
-							<FatText key={t.id} text={t.text} />
-						))}
-					</Skills>
-				</SkillInfo>
+				<Bottom>
+					<SkillInfo>
+						<H1>Skills</H1>
+						<Skills>
+							{textS.map((t) => (
+								<FatText key={t.id} text={t.text} />
+							))}
+						</Skills>
+					</SkillInfo>
+					<Link href={address}>
+						<Span>Go to GitHub</Span>
+					</Link>
+				</Bottom>
 			</Contain>
 		</Wrapper>
 	);
