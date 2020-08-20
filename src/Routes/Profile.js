@@ -3,6 +3,7 @@ import styled, { css } from "styled-components";
 import { Github, Insta } from "../Components/Icons";
 import Image from "../Components/Image";
 import profilePhoto from "../photo/profilePhoto.jpg";
+import backImage from "../photo/BackImage.jpeg";
 
 const Wrapper = styled.div`
 	width: 90%;
@@ -28,15 +29,28 @@ const Name = styled.div`
 	align-items: center;
 `;
 
-const Span = styled.span``;
+const Span = styled.span`
+	font-size: inherit;
+`;
 
 const Info = styled.div`
-	width: 300px;
 	height: 0;
-	background-color: blue;
+	border: 1px solid black;
+	border-radius: 10px;
 	transition: height 0.4s;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: 18px;
+
 	${Span} {
+		line-height: 1.4;
 		opacity: 0;
+		text-align: center;
+		&:first-child {
+			margin-bottom: 10px;
+		}
 	}
 `;
 
@@ -193,7 +207,10 @@ const Profile = () => {
 							<H1>김의교</H1>
 						</Name>
 						<Info>
-							<Span>dadfadf</Span>
+							<Span>친구를 도와주기 위해 시작하다가 흥미를 갖게 되었습니다</Span>
+							<Span>
+								긍정적이고 지속적으로 발전하는 사람이 되고자 끊임 없이 노력하는 개발자
+							</Span>
 						</Info>
 					</ContainHeader>
 					<ContainBottom>
@@ -217,7 +234,7 @@ const Profile = () => {
 				</LeftColumn>
 				<RightColumn>
 					<ContainHeader>
-						<H1>Front-end</H1>
+						<H1>개발자 Developer</H1>
 					</ContainHeader>
 					<ClipContain>
 						<ClipInner>
@@ -225,11 +242,7 @@ const Profile = () => {
 								<Image src={profilePhoto} />
 							</ClipFront>
 							<ClipBack>
-								<Image
-									src={
-										"https://instagram.frec8-1.fna.fbcdn.net/v/t51.2885-19/44884218_345707102882519_2446069589734326272_n.jpg?_nc_ht=instagram.frec8-1.fna.fbcdn.net&_nc_ohc=d3zLaxzyOPwAX-e2feP&oh=c914c496e6245a8544d04fe967666a2f&oe=5F62C68F&ig_cache_key=YW5vbnltb3VzX3Byb2ZpbGVfcGlj.2"
-									}
-								/>
+								<Image src={backImage} />
 							</ClipBack>
 						</ClipInner>
 					</ClipContain>

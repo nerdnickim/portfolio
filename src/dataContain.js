@@ -137,6 +137,10 @@ export const explan = {
 		{ id: 7, text: `게시물 좋아요 확인` },
 		{ id: 8, text: `포스팅 및 유저 검색 기능` },
 		{ id: 9, text: `Netlify를 통하여 웹 배포` },
+		{ id: 9, text: `NodeJs + Express + Prisma를 이용하여 서버 구축` },
+		{ id: 9, text: `GraphQL를 이용하여 필요한 기능 구축` },
+		{ id: 9, text: `Multer를 통하여 업로드 되는 이미지 파일 S3로 전달` },
+		{ id: 9, text: `Heroku를 통하여 배포` },
 	],
 	instaApp: [
 		{
