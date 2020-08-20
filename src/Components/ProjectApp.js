@@ -3,7 +3,7 @@ import styled from "styled-components";
 import ExitComponent from "./ExitComponent";
 import Image from "./Image";
 import FatText from "./FatText";
-import { Arrow } from "./Icons";
+import { Arrow, Check } from "./Icons";
 
 const Wrapper = styled.div`
 	width: 100%;
@@ -29,6 +29,10 @@ const Contain = styled.div`
 	height: 80%;
 	display: flex;
 	flex-direction: column;
+`;
+
+const Span = styled.span`
+	font-size: inherit;
 `;
 
 //In Contain
@@ -71,9 +75,16 @@ const Skills = styled.div`
 `;
 
 const Info = styled.div`
-	max-height: 320px;
-	height: 100%;
 	color: white;
+	font-size: 14px;
+	margin-bottom: 5px;
+	display: flex;
+	${Span} {
+		margin-left: 8px;
+	}
+	svg {
+		fill: #4865ee;
+	}
 `;
 
 // In Header
@@ -145,10 +156,6 @@ const Button = styled.button`
 	width: 100%;
 `;
 
-const Span = styled.span`
-	font-size: 18px;
-`;
-
 const Link = styled.a`
 	${Span} {
 		font-size: 1.4rem;
@@ -162,6 +169,12 @@ const Link = styled.a`
 			color: white;
 		}
 	}
+`;
+
+const InfoContain = styled.div`
+	max-height: 320px;
+	height: 100%;
+	line-height: 1.3rem;
 `;
 
 const ProjectApp = ({ data, explan, textS, address, serverGit }) => {
@@ -260,9 +273,14 @@ const ProjectApp = ({ data, explan, textS, address, serverGit }) => {
 						</MainImage>
 					</MainView>
 					<Infos>
-						<Info>
-							<Span>{explan}</Span>
-						</Info>
+						<InfoContain>
+							{explan.map((t) => (
+								<Info key={t.id}>
+									<Check size={16} />
+									<Span>{t.text}</Span>
+								</Info>
+							))}
+						</InfoContain>
 						<SkillInfo>
 							<H1>Skills</H1>
 							<Skills>

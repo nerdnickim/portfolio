@@ -20,6 +20,7 @@ const Wrapper = styled.div`
 
 const Header = styled.header`
 	padding: 10px 15px;
+	letter-spacing: 2px;
 `;
 
 const H1 = styled.h1`

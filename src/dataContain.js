@@ -85,8 +85,10 @@ export const photos = {
 
 export const textS = {
 	newWave: [
-		{ id: 1, text: "Javascript" },
-		{ id: 2, text: "Jquery" },
+		{ id: 1, text: "Html" },
+		{ id: 2, text: "Css" },
+		{ id: 3, text: "Javascript" },
+		{ id: 4, text: "Jquery" },
 	],
 	instaWeb: [
 		{ id: 1, text: "Javascript" },
@@ -99,17 +101,51 @@ export const textS = {
 	instaApp: [
 		{ id: 1, text: "Javascript" },
 		{ id: 2, text: "ReactNative" },
-		{ id: 3, text: "NodeJs" },
-		{ id: 4, text: "Apollo" },
-		{ id: 5, text: "GraphQL" },
-		{ id: 6, text: "Prisma" },
+		{ id: 3, text: "Expo" },
+		{ id: 4, text: "NodeJs" },
+		{ id: 5, text: "Apollo" },
+		{ id: 6, text: "GraphQL" },
+		{ id: 7, text: "Prisma" },
 	],
 };
 
 export const explan = {
-	newWave: "",
-	instaWeb: "",
-	instaApp: "",
+	newWave: [
+		{
+			id: 1,
+			text: `Cafe24를 통해 기존에 있던 브랜드 홈페이지를 레이아웃 시안을 받아서 구현한 홈페이지 입니다.`,
+		},
+		{
+			id: 2,
+			text: `메뉴에서 버튼을 통해서 넘어가는 형식은 제이쿼리 및 자바스크립트를 통해서 제작`,
+		},
+		{
+			id: 3,
+			text: `상품 디테일 란에 있는 슬라이드는 Swiper를 통해서 구현 하였습니다`,
+		},
+	],
+	instaWeb: [
+		{
+			id: 1,
+			text: `Instagram clone을 통하여 인스타그램에 있는 기본적인 기능들을 다루고 있습니다`,
+		},
+		{ id: 2, text: `회원 가입 및 로그인 기능` },
+		{ id: 3, text: `포스팅 보기` },
+		{ id: 4, text: `프로필 확인 및 수정 과 Axios를 이용하여 프로필 사진 업데이트` },
+		{ id: 5, text: `팔로우 및 팔로잉 한 유저 확인` },
+		{ id: 6, text: `메시지 목록 및 보내기 그리고 메시지 룸 형성` },
+		{ id: 7, text: `게시물 좋아요 확인` },
+		{ id: 8, text: `포스팅 및 유저 검색 기능` },
+		{ id: 9, text: `Netlify를 통하여 웹 배포` },
+	],
+	instaApp: [
+		{
+			id: 1,
+			text: `InstaWebCloning 과 같은 서버를 사용하고 있으며 React Native와 Expo를 통해서 구현 하였습니다`,
+		},
+		{ id: 2, text: `인스타 웹 클론이 사용 가능 한 기능들 모두 구현` },
+		{ id: 3, text: `사진첩에 접근 하고 이미지 업로드` },
+	],
 };
 
 export const address = {

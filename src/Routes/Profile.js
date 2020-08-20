@@ -42,6 +42,7 @@ const Info = styled.div`
 
 const Header = styled.header`
 	padding: 10px 15px;
+	letter-spacing: 2px;
 `;
 
 const LeftColumn = styled.div`
