@@ -20,11 +20,11 @@ const Wrapper = styled.div`
 
 const Header = styled.header`
 	padding: 10px 15px;
-	letter-spacing: 2px;
+	letter-spacing: 0.2em;
 `;
 
 const H1 = styled.h1`
-	font-size: 2em;
+	font-size: 1.7em;
 `;
 
 const Contain = styled.div`

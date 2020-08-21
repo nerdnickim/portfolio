@@ -154,7 +154,7 @@ const Skills = styled.div`
 
 const H1 = styled.h1`
 	color: #4865ee;
-	font-size: 2rem;
+	font-size: 1.7rem;
 	margin: 10px 20px;
 `;
 

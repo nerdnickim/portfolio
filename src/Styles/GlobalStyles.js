@@ -3,16 +3,16 @@ import reset from "styled-reset";
 
 export default createGlobalStyle`
     ${reset}
+    
     *{
         box-sizing: border-box;
     }
     body{
         background-color: #EEE9E9;
-    }
-    span{
+        font-family: 'Open Sans', sans-serif;
         font-size: 24px;
-
     }
+    
     a{
         text-decoration: none;
         color:black;
